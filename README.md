@@ -18,12 +18,20 @@ HTML
 1. Create a basic calculator using HTML, CSS, and JavaScript with the functionality of add, subtract, multiply and divide.
 
 File_name: sample.html
+
 Output:
 ![screenshot](https://github.com/harryongit/cloudvandana_assignment/assets/74458044/bd12bd36-f368-449e-99e2-6da21b6bcba2)
 _____________________________________________________________________________________________________
 2. Create a survey form with Fields; First Name, Last Name, Date of Birth, Country (dropdown), Gender (checkbox), Profession, email, and mobile number. All the input fields are necessary to submit the form. Create two buttons Submit and Reset. Reset will reset the form while clicking on submit, first, it will check all the fields and necessary validations and then a popup will appear displaying all the selected values with labels in front of it. On closing the popup, the form should reset all the values.
 
  File_name: sample1.html
- Output:
  
+ Output:
+ ![screenshot1](https://github.com/harryongit/cloudvandana_assignment/assets/74458044/4b9c1e19-c390-4d03-bedb-511e4c0be0bb)
+
+ ![screenshot2](https://github.com/harryongit/cloudvandana_assignment/assets/74458044/960e8264-1dc3-4b58-900b-b4c6a71948b7)
+
+![screenshot3](https://github.com/harryongit/cloudvandana_assignment/assets/74458044/9b2b2d2b-f450-4ea2-ab49-bd94a653601f)
+
+
 
