@@ -1,0 +1,134 @@
+<!-- Create a basic calculator using HTML, CSS, and JavaScript with the functionality of add, subtract, multiply and divide.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: right;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+#AC {
+background-color:lightgreen;
+color: black;
+}
+
+#AC:hover{
+background-color:red;
+color: white;
+}
+
+#symbol{
+background-color: black;
+color: white;
+}
+
+#symbol:hover{
+background-color: #f0f0f0;
+color: black;
+}
+
+#equalsymbol{
+background-color: black;
+color: lightgreen;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dcdcdc;
+}
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="clearDisplay()" id="AC">AC</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button id="symbol" onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button id="symbol" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button id="symbol" onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button id="symbol" onclick="appendToDisplay('.')">.</button>
+            <button id="equalsymbol" onclick="calculateResult()">=</button>
+            <button id="symbol" onclick="appendToDisplay('/')">/</button>
+        </div>
+    </div>
+    <script>
+    let currentDisplay = "";
+
+function appendToDisplay(value) {
+    currentDisplay += value;
+    document.getElementById("display").value = currentDisplay;
+}
+
+function clearDisplay() {
+    currentDisplay = "";
+    document.getElementById("display").value = "";
+}
+
+function calculateResult() {
+    try {
+        const result = eval(currentDisplay);
+        document.getElementById("display").value = result;
+        currentDisplay = result.toString();
+    } catch (error) {
+        document.getElementById("display").value = "Error";
+        currentDisplay = "";
+    }
+}
+</script>
+</body>
+</html>
+
+<!-- Output is available in readme file of this repository -->
+
